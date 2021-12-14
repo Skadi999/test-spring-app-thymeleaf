@@ -1,0 +1,26 @@
+.user-profile {
+  width: 70%;
+  margin: 5% auto;
+}
+
+.user-profile-info-basic {
+  font-size: 1.4em;
+}
+
+.user-profile-description {
+  width: 80%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: rgb(75, 66, 56);
+}
+
+.user-description-box {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.user-description-box-header {
+  margin: 0;
+  display: inline;
+}

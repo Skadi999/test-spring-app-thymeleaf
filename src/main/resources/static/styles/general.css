@@ -1,0 +1,65 @@
+/* General */
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(41, 41, 41);
+  color: rgb(189, 167, 148);
+  margin: 0;
+}
+
+header {
+  margin-top: 10px;
+}
+
+/* Nav */
+nav {
+  margin-top: 20px;
+  border-bottom: 2px outset white;
+}
+
+.nav-list {
+  padding-left: 0;
+  text-align: center;
+}
+
+.nav-list-item {
+  display: inline;
+  list-style-type: none;
+  margin: 0 1.5em;
+  font-size: 1.1em;
+}
+
+.nav-list-item a {
+  text-decoration: none;
+  color: rgb(189, 167, 148);
+  padding: 5px;
+}
+
+.nav-list-item a:hover {
+  background-color: rgb(116, 116, 116);
+}
+
+
+/* Buttons */
+button {
+  padding: 5px;
+  border-radius: 10%;
+  background-color: rgb(133, 120, 111);
+  border-color: rgb(97, 65, 29);
+}
+
+button:hover {
+  background-color: rgb(163, 150, 141);
+  border-color: rgb(127, 95, 59);
+}
+
+/* User Related */
+.user-avatar {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  border: 1px solid grey;
+}

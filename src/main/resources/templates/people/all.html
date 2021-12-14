@@ -1,0 +1,44 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/styles/general.css}" rel="stylesheet" />
+    <link th:href="@{/styles/people.css}" rel="stylesheet" />
+    <title>People</title>
+</head>
+
+<body>
+<header>
+    <h1>User Profiles</h1>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-list-item"><a th:href="@{/}">Home</a></li>
+            <li class="nav-list-item"><a th:href="@{/people}">View Profiles</a></li>
+            <li class="nav-list-item"><a href="">Item Three</a></li>
+            <li class="nav-list-item"><a href="">Item Four</a></li>
+            <li class="nav-list-item"><a href="">Item Five</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content">
+    <div class="grid">
+        <div th:each="person: ${people}" class="user-card">
+            <img class="user-avatar" th:src="@{${person.avatarUrl}}">
+            <p class="user-card-text">
+                <h4 class="user-card-name" th:text="|${person.name} ${person.lastName}, ${person.age}|"></h4>
+                <span th:text="${person.username}"></span><br>
+                <span th:text="${person.password}"></span><br>
+                <span th:text="${person.email}"></span><br>
+                <span th:text="${person.id}"></span><br>
+            </p>
+            <a th:href="@{/people/{id}(id=${person.id})}"><button>View Profile</button></a>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

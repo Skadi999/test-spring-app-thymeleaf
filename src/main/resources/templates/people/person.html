@@ -1,0 +1,71 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Person</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<p>-->
+<!--    <span th:text="${person.id}">Missing ID</span><br>-->
+<!--    <span th:text="${person.name}">Missing Name</span><br>-->
+<!--    <span th:text="${person.lastName}">Missing Last Name</span><br>-->
+<!--    <span th:text="${person.username}"></span>Missing Username<br>-->
+<!--    <span th:text="${person.email}"></span>Missing Email<br>-->
+<!--    <span th:text="${person.age}">Missing Age</span><br>-->
+<!--    <span th:text="${person.description}">Missing Description</span><br>-->
+
+<!--    <a th:href="@{|/people/${person.id}/edit|}">Edit</a><br>-->
+<!--</p>-->
+<!--<form th:method="DELETE" th:action="@{|/people/${person.id}|}" th:object="${person}">-->
+<!--    <input type="submit" value="Delete">-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/styles/general.css}" rel="stylesheet" />
+    <link th:href="@{/styles/profile.css}" rel="stylesheet" />
+    <title>View Profile</title>
+</head>
+
+<body>
+<header>
+    <h1>Profile</h1>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-list-item"><a th:href="@{/}">Home</a></li>
+            <li class="nav-list-item"><a th:href="@{/people}">View Profiles</a></li>
+            <li class="nav-list-item"><a href="">Item Three</a></li>
+            <li class="nav-list-item"><a href="">Item Four</a></li>
+            <li class="nav-list-item"><a href="">Item Five</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="content">
+    <div class="user-profile">
+        <img class="user-avatar" th:src="@{${person.avatarUrl}}">
+        <p class="user-profile-info-basic">
+            <span th:text="${person.username}"></span><br>
+            <span th:text="|${person.name} ${person.lastName}|"></span><br>
+            <span th:text="${person.age}"></span><br>
+            <span th:text="${person.email}"></span><br>
+        </p>
+        <div class="user-description-box">
+            <h2 class="user-description-box-header">Description</h2>
+            <p class="user-profile-description" th:text="${person.description}"></p>
+
+            <button>Send Private Message</button>
+            <button>Add to Friends</button>
+            <button>Block</button>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

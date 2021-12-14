@@ -1,0 +1,25 @@
+.grid {
+  margin: 3em 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 15px;
+  row-gap: 20px;
+}
+
+.user-card {
+  background-color: rgb(58, 52, 52);
+  border-radius: 6%;
+  margin: 0 10px;
+  padding: 15px;
+  border: 2px solid rgb(116, 104, 104);
+  text-align: center;
+}
+
+.user-card-text {
+  text-align: center;
+}
+
+.user-card-name {
+  margin-top: 5px;
+  font-size: 1.25em;
+}

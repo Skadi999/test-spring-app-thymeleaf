@@ -1,0 +1,63 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/styles/general.css}" rel="stylesheet"/>
+    <link th:href="@{/styles/register.css}" rel="stylesheet"/>
+    <title>Edit Profile</title>
+</head>
+<body>
+<header>
+    <h1>Edit Profile</h1>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-list-item"><a th:href="@{/}">Home</a></li>
+            <li class="nav-list-item"><a th:href="@{/people}">View Profiles</a></li>
+            <li class="nav-list-item"><a href="">Item Three</a></li>
+            <li class="nav-list-item"><a href="">Item Four</a></li>
+            <li class="nav-list-item"><a href="">Item Five</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content">
+    <form th:method="PATCH" th:action="@{|/people/${person.id}|}" th:object="${person}" class="registration-form">
+        <h2 class="registration-form-title">Edit Profile</h2>
+        <label for="username">Username: </label><br>
+        <input type="text" th:field="*{username}" id="username"/>
+        <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Error</p><br>
+
+        <label for="password">Password: </label><br>
+        <input type="text" th:field="*{password}" id="password"/>
+        <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Error</p><br>
+
+        <label for="email">Email: </label><br>
+        <input type="text" th:field="*{email}" id="email"/>
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error</p><br>
+
+        <label for="name">First Name: </label><br>
+        <input type="text" th:field="*{name}" id="name"/>
+        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error</p><br>
+
+        <label for="lastName">Last Name: </label><br>
+        <input type="text" th:field="*{lastName}" id="lastName"/>
+        <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Error</p><br>
+
+        <label for="age">Age: </label><br>
+        <input type="text" th:field="*{age}" id="age"/>
+        <p th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Error</p><br>
+
+        <label for="avatarUrl">Avatar URL: </label><br>
+        <input type="text" th:field="*{avatarUrl}" id="avatarUrl"/>
+        <p th:if="${#fields.hasErrors('avatarUrl')}" th:errors="*{avatarUrl}">Error</p><br>
+
+        <label for="description">Description: </label><br>
+        <textarea name="description" th:field="*{description}" id="description" cols="50" rows="12"></textarea><br>
+        <p th:if="${#fields.hasErrors('description')}" th:errors="*{description}">Error</p><br>
+
+        <input type="submit" value="Submit" class="submit-button">
+    </form>
+</div>
+</body>
+</html>

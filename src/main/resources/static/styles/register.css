@@ -1,0 +1,12 @@
+.registration-form-title {
+  margin-top: 0
+}
+
+.registration-form {
+  border-radius: 3%;
+  padding: 15px 30px 30px 30px;
+  background-color: rgb(56, 49, 44);
+  border: 2px solid rgb(36, 30, 24);
+  width: 40%;
+  margin: 20px auto;
+}
